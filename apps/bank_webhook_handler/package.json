@@ -1,0 +1,26 @@
+{
+  "name": "bank_webhook_handler",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+   "dev": "npm-run-all --parallel start-server start-worker",
+    "start-server": "ts-node src/index.ts",   
+    "start-worker": "ts-node src/consumer.ts", 
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@repo/db": "*",
+    "@types/express": "^4.17.21",
+    "bullmq": "^5.13.2",
+    "esbuild": "^0.23.1",
+    "express": "^4.19.2",
+    "ioredis": "^5.4.1",
+    "npm-run-all": "^4.1.5"
+  }
+}
